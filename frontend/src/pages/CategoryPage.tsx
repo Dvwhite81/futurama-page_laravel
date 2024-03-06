@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import React from "react";
 
 interface CategoryPageProps {
   category: string
@@ -8,10 +8,10 @@ const CategoryPage = ({
   category,
 }: CategoryPageProps) => {
   return (
-    <Container fluid>
-      <h2 className='pad-left'>{category}</h2>
+    <div className="category-page page container">
+      <h2 className="pad-left">{category}</h2>
       <p>Searched Category: {category}</p>
-    </Container>
+    </div>
   );
 };
 
