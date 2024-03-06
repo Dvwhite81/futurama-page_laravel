@@ -1,8 +1,12 @@
 export const CATEGORIES = [
-  'info',
   'characters',
   'cast',
   'episodes',
   'questions',
-  'inventory',
 ];
+
+export const getData = async (category: string) => {
+  const resp = await fetch(`https://api.sampleapis.com/futurama/${category}`);
+  const json = await resp.json();
+  return json;
+};

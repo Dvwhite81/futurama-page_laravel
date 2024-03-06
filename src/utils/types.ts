@@ -16,3 +16,26 @@ export interface Character {
   sayings: string[];
   species: string;
 }
+
+export interface CastMember {
+  bio: {
+    url: string;
+  }
+  name: string;
+  id: number;
+}
+
+export interface TriviaQuestion {
+  question: string;
+  possibleAnswers: string[];
+  correctAnswer: string;
+  id: number;
+}
+
+export interface Episode {
+  desc: string;
+  number: string;
+  originalAirDate: string;
+  title: string;
+  id: number;
+}
