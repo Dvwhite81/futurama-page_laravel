@@ -1,6 +1,7 @@
-import { CATEGORIES } from '../utils/api';
+import { CATEGORIES } from '../utils/helpers';
 import CategoryLink from '../components/CategoryLink';
 import '../styles/Home.css';
+import '../styles/Pages.css';
 
 const Home = () => {
   return (
