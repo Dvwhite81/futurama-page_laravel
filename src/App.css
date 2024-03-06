@@ -12,38 +12,9 @@
   padding: 0;
 }
 
-.dropdown-menu.show {
-  left: 50%;
-  transform: translate(-50%, 5%);
-}
-
-.grid-container {
-  display: grid;
-  gap: 5vw;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto !important;
-  width: 90vw;
-}
-
 a {
   color: whitesmoke;
   text-decoration: none;
-}
-
-.card {
-  text-align: center;
-}
-
-.card-header {
-  display: flex;
-  height: 15vh;
-  padding-bottom: 1rem!important;
-}
-
-img.card-img-top {
-  align-self: center;
-  width: 50%;
-  object-fit: scale-down;
 }
 
 .pad-left {
@@ -60,33 +31,6 @@ button {
   width: fit-content;
 }
 
-.save-btn {
-  position: absolute;
-  right: 0;
-  top: 1.5rem;
-}
-
-.user-form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-
-#logout-btn {
-  background-color: black;
-  border-radius: 10px;
-  position: absolute;
-  right: 1vh;
-  top: calc(var(--navbar-height) + 1vh);
-}
-
-#logout-btn:hover {
-  background-color: whitesmoke;
-  color: black;
-}
-
 #main-logo {
   height: 100%;
   margin: 0 auto;
@@ -94,8 +38,9 @@ button {
 }
 
 #main-logo:hover,
-.icon:hover {
-  background-color: var(--dark-bg);
+.icon:hover,
+.navlink:hover {
+  background-color: transparent;
   cursor: pointer;
   transform: scale(1.2);
 }

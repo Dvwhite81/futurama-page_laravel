@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CategoryPage from './pages/CategoryPage';
 import Home from './pages/Home';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
 import Notification from './components/Notification';
 import './App.css';
 
@@ -13,18 +13,10 @@ function App() {
     <div id='main-container' className='container'>
       <NavBar />
       <Notification message={message} setMessage={setMessage} />
-      <div className='container' style={{ height: 'var(--main-height)' }}>
+      <div className='container' style={{ height: 'var(--min-main-height)' }}>
         <Routes>
-          <Route
-            path='/'
-            element={
-              <Home />
-            }
-          />
-          <Route
-            path={'/categories/:category'}
-            element={<CategoryPage />}
-          />
+          <Route path='/' element={<Home />} />
+          <Route path={'/categories/:category'} element={<CategoryPage />} />
         </Routes>
       </div>
     </div>

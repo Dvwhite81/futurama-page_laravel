@@ -1,5 +1,8 @@
 #navbar {
+  align-items: center;
   background-color: var(--dark-bg);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   height: 100%;
 }
 
@@ -45,4 +48,20 @@
   position: absolute;
   top: 0.5vh;
   transform: translate(-50%);
+}
+
+.left {
+  text-align: left;
+}
+
+.left:first-of-type {
+  margin-left: 1rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.right:last-of-type {
+  margin-right: 1rem;
 }

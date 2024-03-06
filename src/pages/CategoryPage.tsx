@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getData } from '../utils/api';
 import { CastMember, Character, Episode, TriviaQuestion } from '../utils/types';
 
 import Cast from './Cast';
 import Characters from './Characters';
 import Episodes from './Episodes';
 import TriviaPage from './Trivia';
-import { getData } from '../utils/api';
 
 const CategoryPage = () => {
   const [cast, setCast] = useState<CastMember[]>([]);
@@ -27,7 +27,7 @@ const CategoryPage = () => {
       const jsonEpisodes = await getData('episodes');
       setEpisodes(jsonEpisodes);
 
-      const jsonQuestions = await getData('questions');
+      const jsonQuestions = await getData('trivia');
       setQuestions(jsonQuestions);
     };
 
