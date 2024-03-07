@@ -1,3 +1,5 @@
+import { Character } from './types';
+
 export const CATEGORIES = [
   'characters',
   'cast',
@@ -29,37 +31,66 @@ export const getCharactersByCast = (actorId: number) => {
     }
 
     case 2: {
-      voiced = ['Turanga Leela'];
+      voiced = [
+        'Turanga Leela',
+        'Cloberella',
+        'Lee Lemon'
+      ];
       break;
     }
 
     case 3: {
-      voiced = ['Bender Rodriguez'];
+      voiced = [
+        'Bender Rodriguez',
+        'Mr. Panucci',
+        'Barbados Slim',
+        'Robot Santa',
+      ];
       break;
     }
 
     case 4: {
-      voiced = ['Mom'];
+      voiced = [
+        'Mom',
+        'Mrs. Fry',
+        'Hattie McDoogal',
+      ];
       break;
     }
 
     case 5: {
-      voiced = ['Hermes Conrad'];
+      voiced = [
+        'Hermes Conrad',
+        'Reverend Preacherbot',
+        'Barack Obama'
+      ];
       break;
     }
 
     case 6: {
-      voiced = ['Amy Wong'];
+      voiced = [
+        'Amy Wong',
+        'Inez Wong',
+        'Jrr'
+      ];
       break;
     }
 
     case 7: {
-      voiced = ['Kif Kroker', 'Lrr'];
+      voiced = [
+        'Kif Kroker',
+        'Lrr',
+        'Calculon',
+      ];
       break;
     }
 
     case 8: {
-      voiced = ['Scruffy Scruffington'];
+      voiced = [
+        'Scruffy Scruffington',
+        'Turanga Morris',
+        'Mayor Poopenmeyer',
+      ];
       break;
     }
 
@@ -69,7 +100,9 @@ export const getCharactersByCast = (actorId: number) => {
     }
 
     case 10: {
-      voiced = ['Nibbler'];
+      voiced = [
+        'Nibbler',
+      ];
       break;
     }
 
@@ -197,4 +230,15 @@ export const getActorImage = (actorId: number) => {
     }
   }
   return imgSrc;
+};
+
+export const isACharacter = (name: string, characters: Character[]) => {
+  console.log('name:', name);
+  return characters.map((c) => `${c.name.first} ${c.name.last}`).includes(name);
+};
+
+export const getCharacterId = (name: string, characters: Character[]) => {
+  const existingChar = characters.find((c) => `${c.name.first} ${c.name.last}` === name);
+
+  return existingChar?.id;
 };

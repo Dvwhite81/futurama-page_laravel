@@ -54,7 +54,7 @@
   text-align: left;
 }
 
-.left:first-of-type {
+#navbar .left:first-of-type {
   margin-left: 1rem;
 }
 
@@ -62,6 +62,6 @@
   text-align: right;
 }
 
-.right:last-of-type {
+#navbar .right:last-of-type {
   margin-right: 1rem;
 }

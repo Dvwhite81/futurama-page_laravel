@@ -36,7 +36,8 @@
   height: 80%;
 }
 
-.single-cast-page .actor-card {
+.single-cast-page .actor-card,
+.single-character-page .character-card {
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -48,6 +49,12 @@
   margin: 1rem auto;
 }
 
+.single-character-page .character-card .card-img {
+  height: 25%;
+  margin: 1rem auto;
+  width: 25%;
+}
+
 .actor-voices {
   margin-top: 1rem;
 }
@@ -56,3 +63,32 @@
   font-size: larger;
   text-decoration: underline;
 }
+
+.character-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin: 0.5rem auto;
+  width: 90%;
+}
+
+.center {
+  text-align: center;
+}
+
+.sayings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-height: 50%;
+  overflow-y: scroll;
+}
+

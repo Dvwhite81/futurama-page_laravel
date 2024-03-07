@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Character } from '../utils/types';
+import CharacterCard from '../components/CharacterCard';
 
 interface CharactersProps {
   characters: Character[];
@@ -7,9 +9,11 @@ interface CharactersProps {
 const Characters = ({ characters }: CharactersProps) => {
   console.log('characters:', characters);
   return (
-    <div className="page">
+    <div id='characters-page' className='grid-page'>
       {characters.map((char) =>
-        <p key={char.id}>{char.name.first} {char.name.last}</p>
+        <Link key={char.id} to={`/characters/${char.id}`}>
+          <CharacterCard key={char.id} character={char} />
+        </Link>
       )}
     </div>
   );

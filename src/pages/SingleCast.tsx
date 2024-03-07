@@ -1,12 +1,13 @@
-import { useParams } from 'react-router-dom';
-import { CastMember } from '../utils/types';
-import { getActorImage, getCharactersByCast } from '../utils/helpers';
+import { Link, useParams } from 'react-router-dom';
+import { CastMember, Character } from '../utils/types';
+import { getActorImage, getCharacterId, getCharactersByCast, isACharacter } from '../utils/helpers';
 
 interface SingleCastProps {
   cast: CastMember[];
+  characters: Character[];
 }
 
-const SingleCast = ({ cast }: SingleCastProps) => {
+const SingleCast = ({ cast, characters }: SingleCastProps) => {
   const { actorId } = useParams();
   const id = Number(actorId);
   const actor = cast.find((person) => person.id === Number(id));
@@ -23,11 +24,24 @@ const SingleCast = ({ cast }: SingleCastProps) => {
         <div className='actor-voices'>
           <h4>Main voices:</h4>
           <ul>
-            {voiced?.map((voice, index) =>
+            {voiced?.map((voice, index) => (
               <li key={index}>
-                <p>{voice}</p>
+                <p>
+                  {voice}{' '}
+                  {isACharacter(voice, characters) && (
+                    <Link
+                      to={`/characters/${getCharacterId(voice, characters)}`}
+                    >
+                      <img
+                        className='icon'
+                        src='/src/assets/images/right-arrow-icon.png'
+                        alt='external link icon'
+                      />
+                    </Link>
+                  )}
+                </p>
               </li>
-            )}
+            ))}
           </ul>
         </div>
       </div>

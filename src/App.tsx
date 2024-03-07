@@ -9,6 +9,7 @@ import Notification from './components/Notification';
 import SingleCast from './pages/SingleCast';
 import './App.css';
 import { CastMember, Character, Episode, TriviaQuestion } from './utils/types';
+import SingleCharacter from './pages/SingleCharacter';
 
 function App() {
   const [message, setMessage] = useState<string | null>(null);
@@ -43,7 +44,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path={'/categories/:category'} element={<CategoryPage cast={cast} characters={characters} episodes={episodes} questions={questions} />} />
-          <Route path={'/cast/:actorId'} element={<SingleCast cast={cast} />} />
+          <Route path={'/cast/:actorId'} element={<SingleCast cast={cast} characters={characters} />} />
+          <Route path={'/characters/:characterId'} element={<SingleCharacter characters={characters} />} />
         </Routes>
       </div>
     </div>

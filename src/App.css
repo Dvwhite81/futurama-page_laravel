@@ -37,6 +37,10 @@ button {
   width: fit-content;
 }
 
+.icon {
+  height: 1vh;
+}
+
 #main-logo:hover,
 .icon:hover,
 .navlink:hover {
