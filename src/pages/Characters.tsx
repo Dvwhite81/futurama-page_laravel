@@ -7,7 +7,6 @@ interface CharactersProps {
 }
 
 const Characters = ({ characters }: CharactersProps) => {
-  console.log('characters:', characters);
   return (
     <div id='characters-page' className='grid-page'>
       {characters.map((char) =>

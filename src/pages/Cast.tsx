@@ -7,7 +7,6 @@ interface CastProps {
 }
 
 const Cast = ({ cast }: CastProps) => {
-  console.log('cast:', cast);
   return (
     <div id='cast-page' className='grid-page'>
       {cast.map((person) => (

@@ -38,10 +38,10 @@ function App() {
   }, []);
 
   return (
-    <div id='main-container' className='container'>
+    <div id='main-container'>
       <NavBar />
       <Notification message={message} setMessage={setMessage} />
-      <div className='container' style={{ height: 'var(--min-main-height)' }}>
+      <div className='container'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path={'/categories/:category'} element={<CategoryPage cast={cast} characters={characters} episodes={episodes} questions={questions} />} />

@@ -7,12 +7,8 @@ const Home = () => {
   return (
     <div className='home page container'>
       {CATEGORIES.map((category) => (
-        <div className='home-link'>
-          <CategoryLink
-            key={category}
-            category={category}
-            img={`/${category}.png`}
-          />
+        <div key={category} className='home-link'>
+          <CategoryLink category={category} img={`/${category}.png`} />
         </div>
       ))}
     </div>

@@ -10,9 +10,7 @@ const SingleEpisode = ({ episodes }: SingleEpisodeProps) => {
   const { episodeId } = useParams();
   const id = Number(episodeId);
   const episode = episodes.find((e) => e.id === id);
-  console.log('episodeId:', episodeId);
-  console.log('id:', id);
-  console.log('episode:', episode);
+
   if (!episode) return;
 
   const { desc, originalAirDate, title, writers } = episode;

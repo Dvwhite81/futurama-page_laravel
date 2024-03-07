@@ -1,4 +1,4 @@
-import { Character, Episode } from './types';
+import { Character, Episode, TriviaQuestion } from './types';
 
 export const CATEGORIES = [
   'characters',
@@ -233,7 +233,6 @@ export const getActorImage = (actorId: number) => {
 };
 
 export const isACharacter = (name: string, characters: Character[]) => {
-  console.log('name:', name);
   return characters.map((c) => `${c.name.first} ${c.name.last}`).includes(name);
 };
 
@@ -247,4 +246,15 @@ export const getSeasonEpisode = (episode: Episode) => {
   const { number } = episode;
   const [season, ep] = number.split(' - ');
   return [season, ep];
+};
+
+export const getRandomQuestion = (questions: TriviaQuestion[]): TriviaQuestion => {
+  const random = Math.floor(Math.random() * questions.length);
+  const q = questions[random];
+
+  if (q.id < 29) {
+    return q;
+  }
+
+  return getRandomQuestion(questions);
 };

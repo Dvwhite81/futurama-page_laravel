@@ -7,7 +7,6 @@ interface EpisodesProps {
 }
 
 const Episodes = ({ episodes }: EpisodesProps) => {
-  console.log('episodes:', episodes);
   return (
     <div className='page'>
       <table className='episodes-table'>
@@ -25,9 +24,11 @@ const Episodes = ({ episodes }: EpisodesProps) => {
               <tr key={e.number} className='episode-row'>
                 <td>{season}</td>
                 <td>{ep}</td>
-                <Link key={e.number} to={`/episodes/${e.id}`}>
-                  <td>{e.title}</td>
-                </Link>
+                <td>
+                  <Link key={e.number} to={`/episodes/${e.id}`}>
+                    {e.title}
+                  </Link>
+                </td>
               </tr>
             );
           })}
