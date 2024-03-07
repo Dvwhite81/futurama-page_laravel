@@ -10,6 +10,7 @@ import SingleCast from './pages/SingleCast';
 import './App.css';
 import { CastMember, Character, Episode, TriviaQuestion } from './utils/types';
 import SingleCharacter from './pages/SingleCharacter';
+import SingleEpisode from './pages/SingleEpisode';
 
 function App() {
   const [message, setMessage] = useState<string | null>(null);
@@ -46,6 +47,7 @@ function App() {
           <Route path={'/categories/:category'} element={<CategoryPage cast={cast} characters={characters} episodes={episodes} questions={questions} />} />
           <Route path={'/cast/:actorId'} element={<SingleCast cast={cast} characters={characters} />} />
           <Route path={'/characters/:characterId'} element={<SingleCharacter characters={characters} />} />
+          <Route path={'episodes/:episodeId'} element={<SingleEpisode episodes={episodes} />} />
         </Routes>
       </div>
     </div>

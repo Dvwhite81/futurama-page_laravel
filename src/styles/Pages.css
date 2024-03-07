@@ -5,7 +5,8 @@
   text-align: center;
 }
 
-.single-cast-page {
+.single-cast-page,
+.single-episode-page {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -41,6 +42,7 @@
   display: flex;
   flex-direction: column;
   height: 80vh;
+  margin-top: 15vh;
   text-align: center;
 }
 
@@ -52,7 +54,6 @@
 .single-character-page .character-card .card-img {
   height: 25%;
   margin: 1rem auto;
-  width: 25%;
 }
 
 .actor-voices {
@@ -92,3 +93,36 @@
   overflow-y: scroll;
 }
 
+.episodes-table {
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.episodes-table thead {
+  background-color: black;
+  color: lightsteelblue;
+  font-size: larger;
+  line-height: 2rem;
+}
+
+.episode-row:hover,
+.episode-row a:hover {
+  background-color: black;
+  color: lightsteelblue
+}
+
+.episodes-table a {
+  color: black;
+}
+
+.single-episode-page .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+  padding: 1rem;
+
+}

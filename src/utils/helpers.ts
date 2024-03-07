@@ -1,4 +1,4 @@
-import { Character } from './types';
+import { Character, Episode } from './types';
 
 export const CATEGORIES = [
   'characters',
@@ -241,4 +241,10 @@ export const getCharacterId = (name: string, characters: Character[]) => {
   const existingChar = characters.find((c) => `${c.name.first} ${c.name.last}` === name);
 
   return existingChar?.id;
+};
+
+export const getSeasonEpisode = (episode: Episode) => {
+  const { number } = episode;
+  const [season, ep] = number.split(' - ');
+  return [season, ep];
 };

@@ -38,4 +38,5 @@ export interface Episode {
   originalAirDate: string;
   title: string;
   id: number;
+  writers: string;
 }

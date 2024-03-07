@@ -10,7 +10,7 @@ interface SingleCastProps {
 const SingleCast = ({ cast, characters }: SingleCastProps) => {
   const { actorId } = useParams();
   const id = Number(actorId);
-  const actor = cast.find((person) => person.id === Number(id));
+  const actor = cast.find((person) => person.id ===id);
   const voiced = getCharactersByCast(id);
   const imgSrc = getActorImage(id);
 
